@@ -26,3 +26,4 @@ Our final project is an interactive website that shows an interactive map of Bos
 
 ### Attribution
 * [Dataset](http://insideairbnb.com/get-the-data.html "Scroll down to Boston")
+* [Heroku](https://www.youtube.com/watch?v=Li0Abz-KT78&ab_channel=Codemy.com "tutorial")
