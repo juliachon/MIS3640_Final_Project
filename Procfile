@@ -1,1 +1,1 @@
-web: gunicorn app:analysis
+web: gunicorn app:mapwebpage
