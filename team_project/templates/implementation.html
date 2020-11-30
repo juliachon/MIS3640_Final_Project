@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>INFORMATION</title>
+
+	<style>
+	body {background-color: snow; font-family: 'OldSansBlack'}
+	.navbar {background-color: #ff385c; position: fixed; top:0; width:100%; margin: 0; padding: 0px;}
+	.navbar a {float: left;font-size: 16px; font-family: 'OldSansBlack'; color: white; text-align: center; padding: 12px 10px; text-decoration: none; letter-spacing: 2px;}
+	.active {background-color: #D8BFD8;}
+	@font-face {font-family:'OldSansBlack'; src:url(OldSansBlack.ttf)}
+	h1 {font-family:'OldSansBlack'; font-size: 50px; text-align: center; padding-top: 15px; color: #ff385c; font-weight: bold;}
+	h2 {font-family: 'OldSansBlack';}
+	.center {margin-left: auto; margin-right: auto;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	</script>
+  </head>
+
+  <body>
+	<div class="navbar">
+		<a href="http://127.0.0.1:5000/">GOAL</a>
+		<a href="http://127.0.0.1:5000/userinstructions/">USER INSTRUCTIONS</a>
+		<a class="active" href="http://127.0.0.1:5000/implementation/">IMPLEMENTATION INFORMATION</a>
+		<a href="http://127.0.0.1:5000/results/">RESULTS</a>
+		<a href="http://127.0.0.1:5000/evolution/">PROJECT EVOLUTION</a>
+		<a href="http://127.0.0.1:5000/map/">BOSTON MAP</a>
+		<a href="http://127.0.0.1:5000/attribution/">ATTRIBUTION</a>
+</div>
+
+
+<table style="padding-top: 50px; width: 80%;" class="center">
+	<tr>
+		<td style="font-size: 50px; text-align: center; color: #ff385c; text-shadow: 2px 2px black;"> airbnb </td>
+	</tr>
+	<tr>
+		<td style="text-align: center; line-height: 0; color: #ff385c;"> helper. </td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_one.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step One: We started off by reading and cleaning the data set. We excluded the extraneous id variables and names in our new dataframe. We then checked the data frame for type, length, null values, and unique values. We renamed the columns to make it look nicer in our graphs. We began to run analyses on the dataframe, beginning with creating a new dataframe to show the top 10 neighborhoods with the most listings.
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_two.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Two: After that initial analysis, we created a bar graph to show the top 10 neighborhoods. We created a spreadsheet of the neighborhoods and average price per neighborhood through excel, and created a new data frame from that data. Then we had the dataframe look for the top 5 neighborhoods.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_three.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Three: By using the data frame lookup, we separated and combined the data frame into five new data frames that included the data from each of the top five neighborhoods. Once we had these five neighborhood dataframes, we separated the price column in order to have a list of the prices for that neighborhood. With the corresponding prices to each neighborhood, we could create a price distribution table. We used the percentiles (25%, 50%, 75%) to organize the distribution and created a statistical data frame to implement into a table.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_four.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Four: We created a bar graph for the different room types to see which room types were popular in certain neighborhoods as compared to the other neighborhoods. For a different interpretation and better visualization of the ‘room type’ data, we created a pie chart to show which rooms were preferred. For the pie chart we had to generate a legend, customize the wedges, convert values to percentage and add labels. 
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_five.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Five: We then generated a correlation matrix to analyze the correlation between the variables, which would help us with our regression analysis. We also created a map that plotted the longitude and latitude of every single Boston listing. This became the inspiration of our interactive map on our website. 
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_six.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Six: Next, we built the regression model, dropping longitude and latitude as variables because they are more categorical in nature, and previous correlation maps showed that they had little correlation with all the other independent variables.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_seven.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Seven: Here, we begin using Folium to create our map. Luckily, we already had a GeoJSON file of all the neighborhoods. We set the location of the map to Boston, and added a layer which outlined each neighborhood. After creating that layer, we wrote a function to add markers to the map.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="{{url_for('static', filename='step_eight.jpeg')}}", width="750", height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Step Eight: Lastly, we added markers for all the neighborhoods by inputting the individual coordinates, landmark and the average price of an airbnb hosting in that neighborhood. We created a for loop to input that information into the marker function. The for loop would repeat until all neighborhoods are complete and generate markers! 
+		</td>
+	</tr>
+</table>
+<br>
+<br> 
+  </body>
+</html>

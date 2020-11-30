@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>GOAL</title>
+
+	<style>
+	body {background-color: snow; font-family: 'OldSansBlack'}
+	.navbar {background-color: #ff385c; position: fixed; top:0; width:100%; margin: 0; padding: 0px;}
+	.navbar a {float: left;font-size: 16px; font-family: 'OldSansBlack'; color: white; text-align: center; padding: 12px 10px; text-decoration: none; letter-spacing: 2px;}
+	.active {background-color: #D8BFD8;}
+	@font-face {font-family:'OldSansBlack'; src:url_for('static', filename='OldSansBlack.ttf')}
+	h1 {font-family:'OldSansBlack'; font-size: 50px; text-align: center; padding-top: 15px; color: #ff385c; font-weight: bold;}
+	h2 {font-family: 'OldSansBlack';}
+	.center {margin-left: auto; margin-right: auto;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	</script>
+  </head>
+
+  <body>
+	<div class="navbar">
+		<a href="http://127.0.0.1:5000/">GOAL</a>
+		<a href="http://127.0.0.1:5000/userinstructions/">USER INSTRUCTIONS</a>
+		<a href="http://127.0.0.1:5000/implementation/">IMPLEMENTATION INFORMATION</a>
+		<a class="active" href="http://127.0.0.1:5000/results/">RESULTS</a>
+		<a href="http://127.0.0.1:5000/evolution/">PROJECT EVOLUTION</a>
+		<a href="http://127.0.0.1:5000/map/">BOSTON MAP</a>
+		<a href="http://127.0.0.1:5000/attribution/">ATTRIBUTION</a>
+</div>
+
+
+<table style="padding-top: 50px;" class="center">
+	<tr>
+		<td style="font-size: 50px; color: #ff385c;"> airbnb </td>
+	</tr>
+	<tr>
+		<td style="text-align: center; line-height: 0;"> helper </td>
+	</tr>
+</table>
+<br> <br> 
+	<table class="center">
+<tr> 
+	<td> 
+		<img src="{{url_for('static', filename='top_10.PNG')}}", width="350", height="300">
+	</td>
+</tr>
+<tr>
+	<td>
+		This table shows the top ten neighborhoods with the most listings. To give a snapshot of the neighborhoods that are most popluated with short term rental, these top ten supply a vareiety of propertries for the user to choose from. Also if the user looking to rent has a party of people with them, choosing properties that are close to each other is crucial and a neighborhood with more listings becomes ideal.
+	</td>
+</tr>  	
+<tr> 
+	<td> 
+		<img src="{{url_for('static', filename='bar_chart.jpeg')}}", width="350", height="300">
+	</td>
+</tr>
+	<td>
+		This barchart shows the number of listings by neighborhood. If a user would like a larger assortment of properties to choose from, the user should look into Dorchester and Downtown. As per 2019, Dorchester has 400 listings and Downtown has 336 listings. The top 10 neighborhoods are Dorchester, Downtown Boston, Jamaica Plain, Brighton, Roxbury, South End, Back Bay, East Boston, Allston, and South Boston.  
+	</tb>
+</tr> 
+<tr> 
+	<td> 
+		<img src="{{url_for('static', filename='pie_chart.jpeg')}}", width="500", height="350">
+	</td>
+</tr>
+<tr>
+	<td>
+		This pie chart shows the room type variation in Boston. 63.7% of all the airbnb listings are entire homes/apartments, with 35% of the listings being private rooms. Hence, it can make it easier for Airbnb hosts to see the most popular listings and decide to offer an entire apartment rather than a shared room. On the other hand, a risk averse airbnb host could opt for private or shared listings and make more of these untouched listings segments. For an airbnb user, they can see that the hosts in Boston offer entire homes/apartments and could look further into super hosts of these popular listings. 
+	</td>
+</tr>
+<tr> 
+<td> 
+	<img src="{{url_for('static', filename='price_distribution.jpeg')}}", width="350", height="300">
+</td>
+</tr>
+<tr>
+<td>
+	This price distribution table allows users that are looking to host to effectively price their property in order to maximize their profit and meet the price point of users looking to rent in that neighborhood. With this information, hosts have the choice to push the limit by maximizing their price or receive more rentals with a lower price. 
+</td>	
+</tr>
+</tr>
+	<tr> 
+	<td> 
+		<img src="{{url_for('static', filename='top_room_types.png')}}", width="350", height="300">
+	</td>
+</tr>
+<tr>
+	<td>
+		We created this to show the most common room types for the top 10 neighborhoods. We found that the most common room type was the entire home/apartment, but private rooms were a close second depending on the neighborhood.  
+	</td>	
+</tr>	
+<tr> 
+	<td> 
+		<img src="{{url_for('static', filename='correlation_map.png')}}", width="350", height="300">
+	</td>
+</tr>
+<tr>
+	<td>
+		The correlation matrix shows the correlation between the variables for the regression model. The diagonal line of 1’s indicates that the variables are perfectly correlated with itself, as expected. All missing data and errors were dealt with in the cleaning of the data. We found out that the most correlated variables were minimum nights and availability and the most negatively correlated variables were minimum nights and the number of reviews. Since price was the dependent variable, it was excluded from the correlation.
+  
+	</td>	
+</tr>	
+	</table>
+  </body>
+</html>
