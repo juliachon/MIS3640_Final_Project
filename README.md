@@ -15,10 +15,11 @@ Our final project is an interactive website that shows an interactive map of Bos
 
 
 ### Instructions
-1. Download required packages and programs. Our website was created using Flask.
+1. [Here](https://airbnb-helper.herokuapp.com/ "is the link to our project")
 2. Once on the homepage that shows our goals for this project, click on the Boston Map button in the navigation bar.
 3. With the Boston Map, hover over the neighborhood landmark to get a snapshot of the average price of Airbnb listings for that neighborhood.
 4. Click on the Results button in the navigation bar to get more information on how the neighborhoods are ranked on attributes such as price, room type, and ratings. This page will have recommendations on how to choose the perfect short-term rental for you in the right neighborhood for the right price.
+5. Feel free to explore our other tabs!
 
 
 
