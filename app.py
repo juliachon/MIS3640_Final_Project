@@ -11,22 +11,22 @@ def goal():
 def userinstructions():
     return render_template('userinstructions.html')
 
-@app.route('/results/')
+@app.route('/results.html/')
 def results():
     return render_template('results.html')   
 
-@app.route('/implementation/')
+@app.route('/implementation.html/')
 def implement():
     return render_template('implementation.html')  
 
-@app.route('/attribution/')
+@app.route('/attribution.html/')
 def attribution_page():
     return render_template('attribution.html')
 
-@app.route('/evolution/')
+@app.route('/evolution.html/')
 def attribution():
     return render_template('evolution.html')
 
-@app.route('/map/')
+@app.route('/map.html/')
 def bostonMap():
      return render_template("bostonMap.html")
